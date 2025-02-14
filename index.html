@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olshop Skincare</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-image: url('header-background.jpg'); /* Ganti dengan path gambar header yang sesuai */
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+            padding: 80px 20px; /* Tambahkan padding lebih besar agar header lebih menonjol */
+            position: relative;
+            height: 100vh; /* Full height screen untuk kesan yang lebih besar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Menambahkan efek bayangan untuk teks agar lebih kontras */
+        }
+
+        /* Gambar di dalam header */
+        header img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.5em;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff66b2;
+            color: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-card img:hover {
+            transform: scale(1.05);
+        }
+        .product-card h3 {
+            font-size: 1.4em;
+            color: #333;
+            margin: 15px;
+        }
+        .product-card p {
+            color: #777;
+            font-size: 0.95em;
+            margin: 0 15px 15px;
+        }
+        .price {
+            font-weight: bold;
+            color: #00bfae;
+            margin: 10px 15px;
+        }
+        .product-card button {
+            background-color: #00bfae;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            height: 50px;
+            border-radius: 0 0 12px 12px;
+        }
+        .product-card button:hover {
+            background-color: #ff66b2;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            nav a {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav {
+                flex-direction: column;
+            }
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="kel.jpeg" alt="Skincare Image">
+    <h1>Olshop Skincare</h1>
+    <p>Raih Kulit Sehat dan Glowing dengan Produk Terbaik</p>
+</header>
+
+<nav>
+    <a href="#">Beranda</a>
+    <a href="#">Produk</a>
+    <a href="#">Tentang Kami</a>
+    <a href="#">Kontak</a>
+</nav>
+
+<div class="container">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+        <img src="skin.jpeg" alt="Skintific">
+        <h3>Paket Skincare Skintific</h3>
+        <p>SKINTIFIC STARTER KIT 5X CERAMIDE BARRIER REPAIR SKINCARE PAKET WAJAH.</p>
+        <div class="price">Rp 129.000</div>
+        <a href="https://id.shp.ee/nMEPAsa" target="_blank">
+        <button>Beli Sekarang</button>
+        </a>
+    </div>
+    
+    <!-- Product Card 2 -->
+    <div class="product-card">
+        <img src="wardah.jpeg" alt="Wardah">
+        <h3>Paket Skincare Wardah</h3>
+        <p>Wardah Lightening Series.</p>
+        <div class="price">Rp 128.000 - 155.000</div>
+        <a href="https://id.shp.ee/HNHMVp4" target="_blank">
+            <button>Beli Sekarang</button>
+        </a>
+    </div>
+    
+    <!-- Product Card 3 -->
+    <div class="product-card">
+        <img src="face.jpeg" alt="Facetology">
+        <h3>Paket Skincare Facetology</h3>
+        <p>Facetology Triple Care.</p>
+        <div class="price">Rp 97.800</div>
+        <a href="https://id.shp.ee/e2PdeLj" target="_blank">
+            <button>Beli Sekarang</button>
+        </a>
+    </div>
+    
+    <!-- Product Card 4 -->
+    <div class="product-card">
+        <img src="npure.jpeg" alt="Npure">
+        <h3>Paket Skincare Npure</h3>
+        <p>Npure Acne Care dan Centella Asiatica</p>
+        <div class="price">Rp 210.000</div>
+        <a href=" https://id.shp.ee/F6X2KKt" target="_blank">
+            <button>Beli Sekarang</button>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Olshop Skincare. Semua Hak Dilindungi.</p>
+</footer>
+
+</body>
+</html>
